@@ -1,0 +1,243 @@
+/*Standard settings*/
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(23, 23, 23);
+}
+
+/*fjerner scrollbar men beholder scrollefunksjon*/
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/*gir generell text hvit farge*/
+.mainbar{
+    color: white;
+}
+
+/*class for sorte topbar*/
+.topbar{
+    display: flex;
+    background-color: black;
+}
+
+/*her kommer css for id av knappene + bilde under parent topbar*/
+.topbar > #meny{
+    color: white;
+    font-size: 1vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    margin-left: -27vw;
+    margin-top: 2.6vw;
+    width: 4vw;
+    height: 2vw;
+    background-color: black;
+}
+
+.topbar > #home{
+    color: white;
+    font-size: 1vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    margin-left: -10vw;
+    margin-top: 2.6vw;
+    width: 4vw;
+    height: 2vw;
+    background-color: black;
+}
+
+.topbar > #logginn{
+    color: white;
+    font-size: 1vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    margin-left: 21.5vw;
+    margin-top: 2.6vw;
+    width: 6vw;
+    height: 2vw;
+    background-color: black;
+}
+
+.topbar > #kontaktoss{
+    color: white;
+    font-size: 1vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    margin-left: 2vw;
+    margin-top: 2.6vw;
+    width: 8vw;
+    height: 2vw;
+    background-color: black;
+}
+
+.topbar > #restaurantBilde{
+    margin-left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    align-self: center;
+}
+
+/*hoverfunksjon for de forskjellige knappene + bilde*/
+#meny:hover{
+    color: rgb(166, 41, 41);
+    cursor: pointer;
+}
+
+#home:hover{
+    color: rgb(166, 41, 41);
+    cursor: pointer;
+}
+
+#logginn:hover{
+    color: rgb(166, 41, 41);
+    cursor: pointer;
+}
+
+#kontaktoss:hover{
+    color: rgb(166, 41, 41);
+    cursor: pointer;
+}
+
+#matbilde{
+    width: 100vw;
+    height: 28vw;
+}
+
+/*class klikkOgHentBox for klikk og hent boksen over bildet*/
+.klikkOgHentBox{
+    position: absolute;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:17vw;
+    height: 9vw;
+    background-color: rgba(23, 23, 23, 0.777);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    margin-top: 8vw;
+    margin-left: 12vw;
+}
+
+.klikkOgHentBox:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.819);
+}
+
+/*for children av klikkOgHentBox*/
+#klokkeslett{
+    font-size: 0.9vw;
+    color: rgb(0, 161, 0);
+    margin-top: -0.6vw;
+}
+
+#dagenåpent{
+    font-size: 1vw;
+    margin-top: -0.4vw;
+}
+
+#dagenidag{
+    font-size: 1.3vw;
+    margin-top: 0.9vw;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*CSS spesifikt for meny.html*/
+/*---------------------------------------------------------------------------------*/
+
+/*Aligner flexbox containeren til midten*/
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Definerer class for flexboksene, child of flexcontainer*/
+.flex-child {
+    margin: 2vw;
+    margin-top: 4vw;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:17vw;
+    height: 9vw;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background-color: brown;
+}
+
+.flex-child:hover{
+    cursor: pointer;
+}
+
+/*class for overskriftene SNACKS, LUNSJ, MIDDAG*/
+.flexed {
+    margin: 2vw;
+    margin-top: 2vw;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width:17vw;
+    height: 0vw;
+    color: rgb(166, 41, 41);
+}
+
+/*class for de sorte boksene over flex-child class, adapted for flere browsers*/
+.hoverbox {
+    position: absolute;
+    margin: 2vw;
+    margin-top: 4.5vw;
+    left: -2vw;
+    bottom: -2vw;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.9vw;
+    width:17vw;
+    height: 4vw;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.789);
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+    -o-transition: height .5s;
+    transition: height .5s;
+}
+
+/*transition for høyde av sorte boksene når man hovrer på enten flex-child eller hoverbox, adapted for flere browsers*/
+.flex-child:hover .hoverbox{
+    background-color: rgba(0, 0, 0, 0.877);
+    transition: .1s ls ease-in-out;
+    -o-transition: height .5;
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+    transition: height .5s;
+    height: 9vw;
+}
+
+/*class for allergene/vegan/vegetarianer*/
+.hiddenflex{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*transition for å vise hiddenflex når man hovrer first-child, adapted for flere browsers*/
+.flex-child:hover .hiddenflex{
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    transition-delay: .2s;
+    opacity: 1;
+    visibility: visible;
+}
