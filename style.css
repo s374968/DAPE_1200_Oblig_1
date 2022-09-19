@@ -4,11 +4,18 @@ html, body{
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(23, 23, 23);
+    overflow-y: overlay;
 }
 
 /*fjerner scrollbar men beholder scrollefunksjon*/
-body::-webkit-scrollbar{
-    display: none;
+body::-webkit-scrollbar
+{
+	background-color: rgb(154, 154, 154);
+    
+}
+body::-webkit-scrollbar-thumb
+{
+	background-color: rgb(166, 41, 41);
 }
 
 /*gir generell text hvit farge*/
@@ -18,83 +25,28 @@ body::-webkit-scrollbar{
 
 /*class for sorte topbar*/
 .topbar{
-    display: flex;
+    display: grid;
     background-color: black;
-}
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    align-content: center;
+    height: 10%;
 
+}
+#restaurantBilde{
+    width: 100%
+}
 /*her kommer css for id av knappene + bilde under parent topbar*/
-.topbar > #meny{
+.topbar > *{
     color: white;
     font-size: 1vw;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: normal;
-    margin-left: -27vw;
-    margin-top: 2.6vw;
-    width: 4vw;
-    height: 2vw;
     background-color: black;
-}
-
-.topbar > #home{
-    color: white;
-    font-size: 1vw;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: normal;
-    margin-left: -10vw;
-    margin-top: 2.6vw;
-    width: 4vw;
-    height: 2vw;
-    background-color: black;
-}
-
-.topbar > #logginn{
-    color: white;
-    font-size: 1vw;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: normal;
-    margin-left: 21.5vw;
-    margin-top: 2.6vw;
-    width: 6vw;
-    height: 2vw;
-    background-color: black;
-}
-
-.topbar > #kontaktoss{
-    color: white;
-    font-size: 1vw;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: normal;
-    margin-left: 2vw;
-    margin-top: 2.6vw;
-    width: 8vw;
-    height: 2vw;
-    background-color: black;
-}
-
-.topbar > #restaurantBilde{
-    margin-left: 50%;
-    transform: translate(-50%);
-    cursor: pointer;
-    align-self: center;
+    font-weight: 600;
 }
 
 /*hoverfunksjon for de forskjellige knappene + bilde*/
-#meny:hover{
-    color: rgb(166, 41, 41);
-    cursor: pointer;
-}
-
-#home:hover{
-    color: rgb(166, 41, 41);
-    cursor: pointer;
-}
-
-#logginn:hover{
-    color: rgb(166, 41, 41);
-    cursor: pointer;
-}
-
-#kontaktoss:hover{
+.topbar > button:hover{
     color: rgb(166, 41, 41);
     cursor: pointer;
 }
@@ -155,13 +107,16 @@ body::-webkit-scrollbar{
     justify-content: center;
 }
 
+.flex-child, .flexed{
+    text-align: center;
+    width:17vw;
+    margin: 2vw;
+}
+
 /*Definerer class for flexboksene, child of flexcontainer*/
 .flex-child {
-    margin: 2vw;
     margin-top: 4vw;
-    text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width:17vw;
     height: 9vw;
     color: white;
     padding-left: 20px;
@@ -178,11 +133,8 @@ body::-webkit-scrollbar{
 
 /*class for overskriftene SNACKS, LUNSJ, MIDDAG*/
 .flexed {
-    margin: 2vw;
     margin-top: 2vw;
-    text-align: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width:17vw;
     height: 0vw;
     color: rgb(166, 41, 41);
 }
@@ -214,7 +166,7 @@ body::-webkit-scrollbar{
 
 /*transition for høyde av sorte boksene når man hovrer på enten flex-child eller hoverbox, adapted for flere browsers*/
 .flex-child:hover .hoverbox{
-    background-color: rgba(0, 0, 0, 0.877);
+    background-color: rgba(0, 0, 0, 0.95);
     transition: .1s ls ease-in-out;
     -o-transition: height .5;
     -webkit-transition: height .5s;
