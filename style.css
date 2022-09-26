@@ -8,14 +8,8 @@ html, body{
 }
 
 /*fjerner scrollbar men beholder scrollefunksjon*/
-body::-webkit-scrollbar
-{
-	background-color: rgb(154, 154, 154);
-    
-}
-body::-webkit-scrollbar-thumb
-{
-	background-color: rgb(166, 41, 41);
+body::-webkit-scrollbar{
+    display: none;
 }
 
 /*gir generell text hvit farge*/
